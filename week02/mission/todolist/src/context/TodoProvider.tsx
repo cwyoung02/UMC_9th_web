@@ -6,6 +6,7 @@ const TodoContext = createContext<TodoContextType|undefined>(undefined);
 export const TodoProvider = ({children}: {children: ReactNode}) =>{
   const [todoList, setTodoList] = useState<Task[]>([]);
   const [doneList, setDoneList] = useState<Task[]>([]);
+  const [isDark, setIsDark] = useState(false);
   
   function completeTask(task: Task): void{
     setTodoList(todoList.filter((t) => t.id !== task.id));
@@ -16,9 +17,19 @@ export const TodoProvider = ({children}: {children: ReactNode}) =>{
     setDoneList(doneList.filter((t) => t.id !== task.id));
   };
 
+  function toggleDarkMode(): void{
+    if (isDark){
+      document.body.style.backgroundColor = '#eef2f3';
+    }
+    else{
+      document.body.style.backgroundColor = '#606060ff';
+    }
+    setIsDark(!isDark);
+  }
+
   return(
     <TodoContext.Provider 
-      value={{todoList, doneList, setTodoList, setDoneList, completeTask, deleteTask}}
+      value={{todoList, doneList, setTodoList, setDoneList, completeTask, deleteTask, isDark, toggleDarkMode}}
     >
       {children}
     </TodoContext.Provider>

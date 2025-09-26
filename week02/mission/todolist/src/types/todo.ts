@@ -21,4 +21,6 @@ export interface TodoContextType{
   setDoneList: React.Dispatch<React.SetStateAction<Task[]>>;
   completeTask: (task: Task) => void;
   deleteTask: (task: Task) => void;
+  isDark: boolean;
+  toggleDarkMode: () => void;
 };

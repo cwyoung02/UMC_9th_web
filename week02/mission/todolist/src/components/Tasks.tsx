@@ -1,10 +1,16 @@
+import clsx from "clsx"
 import type { TasksProps, Task } from "../types/todo"
+import { useTodo } from "../context/TodoProvider"
 
 const ListBtn = ({ taskList, onClick, color, btnText }: TasksProps) => {
+  const {isDark} = useTodo();
   return (
     <>
       {taskList.map((task: Task) => (
-        <li className='render-container__item' key={task.id}>
+        <li className={clsx(
+          'render-container__item',
+          isDark ? 'bg-gray-400 text-white' : 'bg-#f9f9f9'
+        )} key={task.id}>
           {task.text}
           <button
             className='render-container__item-button'
