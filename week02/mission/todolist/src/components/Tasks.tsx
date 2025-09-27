@@ -2,7 +2,7 @@ import clsx from "clsx"
 import type { TasksProps, Task } from "../types/todo"
 import { useTodo } from "../context/TodoProvider"
 
-const ListBtn = ({ taskList, onClick, color, btnText }: TasksProps) => {
+const Tasks = ({ taskList, onClick, color, btnText }: TasksProps) => {
   const {isDark} = useTodo();
   return (
     <>
@@ -23,4 +23,4 @@ const ListBtn = ({ taskList, onClick, color, btnText }: TasksProps) => {
   )
 }
 
-export default ListBtn
+export default Tasks

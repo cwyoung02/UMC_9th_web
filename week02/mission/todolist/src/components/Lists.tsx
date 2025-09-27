@@ -3,7 +3,7 @@ import { useTodo } from "../context/TodoProvider"
 import type { ListsProps } from "../types/todo";
 import clsx from "clsx";
 
-const List = ( {isCompleted}: ListsProps) => {
+const Lists = ( {isCompleted}: ListsProps) => {
   const {todoList, doneList, completeTask, deleteTask, isDark} = useTodo();
 
   return (
@@ -24,4 +24,4 @@ const List = ( {isCompleted}: ListsProps) => {
   )
 }
 
-export default List
+export default Lists
