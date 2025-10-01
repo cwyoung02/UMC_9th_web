@@ -1,12 +1,12 @@
 import type { Movie } from '../types/movie'
 
-type MovieListProps ={
+type PosterProps ={
   movie: Movie
 }
 
-const MovieList = ({movie}: MovieListProps) => {
+const Poster = ({movie}: PosterProps) => {
   return (
-    <li className='group relative overflow-hidden rounded-xl'>
+    <li className='group relative overflow-hidden rounded-xl shadow-xl'>
       <img 
         src={`https://image.tmdb.org/t/p/w154${movie.poster_path}`}
         alt={movie.title}
@@ -26,4 +26,4 @@ const MovieList = ({movie}: MovieListProps) => {
   )
 }
 
-export default MovieList
+export default Poster
