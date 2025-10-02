@@ -49,7 +49,9 @@ const MovieDetail = () => {
     fetchDetails();
   }, [params.movieId]);
 
-  if (loading) return <LoadingSpinner />
+  if (loading){ 
+    return <div className='flex items-center justify-center h-dvh'><LoadingSpinner /></div>
+  }
 
   return (
     <div className='m-10'>
