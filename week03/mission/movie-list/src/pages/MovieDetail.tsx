@@ -51,6 +51,8 @@ const MovieDetail = () => {
 
   if (loading) return <LoadingSpinner />
 
+  console.log(credits);
+
   return (
     <div className='m-10'>
       <DetailCard 
