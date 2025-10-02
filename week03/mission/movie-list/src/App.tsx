@@ -1,8 +1,9 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import RootLayout from './layout/rootLayout'
+import RootLayout from './layout/RootLayout'
 import NotFound from './pages/NotFound'
-import HomePage from './pages/Homepage';
+import HomePage from './pages/HomePage';
+import MovieDetail from './pages/MovieDetail';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: 'upcoming',
         element: <HomePage nav="upcoming"/>
+      },
+      {
+        path: 'movies/:movieId',
+        element: <MovieDetail />
       }
     ],
   },
