@@ -13,7 +13,7 @@ const Nav = () => {
           className="text-white"
         >로그인</Link>
         <Link 
-          to="/signin"
+          to="/signup"
           className="text-white bg-pink-500 p-2 rounded-md"
         >회원가입</Link>
       </div>

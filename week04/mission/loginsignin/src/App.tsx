@@ -3,7 +3,8 @@ import HomePage from './pages/HomePage'
 import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 import RootLayout from './layout/RootLayout';
-import Signin from './pages/Signin';
+import Signup from './pages/Signup';
+import MyPage from './pages/MyPage';
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,8 @@ const router = createBrowserRouter([
     children: [
       {index: true, element: <HomePage />},
       {path: 'login', element: <Login />},
-      {path: 'signin', element: <Signin />}
+      {path: 'signup', element: <Signup />},
+      {path: 'my', element: <MyPage />}
     ]
   },
 ]);
