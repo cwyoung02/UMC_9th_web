@@ -6,6 +6,7 @@ import RootLayout from './layout/RootLayout';
 import Signup from './pages/Signup';
 import MyPage from './pages/MyPage';
 import ProtectedLayout from './layout/ProtectedLayout';
+import GoogleUserInformation from './pages/GoogleUserInformation';
 
 const routes: RouteObject[] = [
   {
@@ -16,6 +17,7 @@ const routes: RouteObject[] = [
       {index: true, element: <HomePage />},
       {path: 'login', element: <Login />},
       {path: 'signup', element: <Signup />},
+      {path: '/v1/auth/google/callback', element: <GoogleUserInformation />},
     ]
   },
 ];

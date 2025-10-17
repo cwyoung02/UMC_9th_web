@@ -61,6 +61,10 @@ const Login = () => {
     }
   }
 
+  const googleLogin = () => {
+    window.location.href = import.meta.env.VITE_SERVER_API_URL + '/v1/auth/google/login'
+  }
+
   return (
     <div className='flex flex-col items-center justify-center h-full'>
       <div className='flex flex-col gap-4'>
@@ -73,6 +77,12 @@ const Login = () => {
           <h1 className="text-white text-2xl mb-2">로그인</h1>
           <span></span>
         </div>
+
+        <button
+          type="button"
+          className="w-full text-white bg-gray-900 py-[5px] rounded-sm text-lg hover:bg-gray-700 cursor-pointer mb-2"
+          onClick={googleLogin}
+        >구글 로그인</button>
 
         <input
           {...register('email')}
