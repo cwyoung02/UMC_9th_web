@@ -14,7 +14,7 @@ const Nav = ({onMenuClick}: NavProps) => {
   }
 
   return (
-    <nav className="bg-gray-900 flex items-center justify-between p-2 fixed w-full">
+    <nav className="bg-gray-900 flex items-center justify-between p-2 fixed w-full z-10">
       <div className="flex items-center gap-3">
         <button
           onClick={onMenuClick}

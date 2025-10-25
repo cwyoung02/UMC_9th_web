@@ -17,7 +17,7 @@ const RootLayout = () => {
   return (
     <div className='flex flex-col h-dvh relative'>
       <Nav onMenuClick={toggleSidebar} />
-      <div className='flex flex-1 bg-black mt-13'>
+      <div className='flex flex-1 bg-black mt-13 relative'>
         <aside className='hidden lg:block'>
           <Side />
         </aside>

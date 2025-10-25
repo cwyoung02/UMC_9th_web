@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext"
-import type { Lp } from "../types/lp"
+import { useAuth } from "../../context/AuthContext"
+import type { Lp } from "../../types/lp"
 
 interface LpCardProps {
   lp: Lp
