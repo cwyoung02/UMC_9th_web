@@ -8,8 +8,8 @@ import { useAuth } from "../context/AuthContext";
 const MyPage = () => {
   const {accessToken} = useAuth();
   const {data} = useGetMyInfo(accessToken);
-  const {mutate} = usePatchUsers();
   const [isEdit, setIsEdit] = useState(false);
+  const {mutate} = usePatchUsers(setIsEdit);
   const [newAvatar, setNewAvatar] = useState<string | undefined>(undefined);
   const [newName, setNewName] = useState("");
   const [newBio, setNewBio] = useState<string | undefined>(undefined);
@@ -42,9 +42,7 @@ const MyPage = () => {
       avatar: newAvatar,
     };
 
-    mutate(body, {
-      onSuccess: () => setIsEdit(false),
-    })
+    mutate(body)
   }
 
   return (
@@ -93,7 +91,6 @@ const MyPage = () => {
               type="text"
               className="text-3xl border border-white rounded-md"
             />
-            <h1 className="text-xl">{data?.bio ? data.bio : "없음"}</h1>
             <h1 className="text-xl">{data?.email}</h1>
           </div>
         </div>
